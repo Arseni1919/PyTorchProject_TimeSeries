@@ -6,7 +6,8 @@ from utils_plots import plot_forecast
 
 
 # --- pipeline initialization ---
-pipeline = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map="cpu")
+# pipeline = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map="cpu")  # online
+pipeline = Chronos2Pipeline.from_pretrained("./chronos2_weights", device_map="cpu")  # local
 
 
 # --- data loading ---
